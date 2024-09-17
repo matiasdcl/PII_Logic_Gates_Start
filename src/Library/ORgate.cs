@@ -4,6 +4,11 @@ public class ORgate : IValorVerdad
 {
     private List<IValorVerdad> entradas = new List<IValorVerdad>();
 
+    public List<IValorVerdad> GetEntradas()
+    {
+        return entradas;
+    }
+
     public void AgregarValor(IValorVerdad valorDeVerdad)
     {
         entradas.Add(valorDeVerdad);
