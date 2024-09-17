@@ -2,7 +2,7 @@ namespace Library;
 
 public class ORgate : IValorVerdad
 {
-    private List<IValorVerdad> entradas;
+    private List<IValorVerdad> entradas = new List<IValorVerdad>();
 
     public void AgregarValor(IValorVerdad valorDeVerdad)
     {
@@ -11,7 +11,7 @@ public class ORgate : IValorVerdad
     
     public bool Calcular()
     {
-        bool resultado = true;
+        bool resultado = false;
         foreach (IValorVerdad valorDeVerdad in entradas)
         {
             resultado = resultado || valorDeVerdad.Calcular();

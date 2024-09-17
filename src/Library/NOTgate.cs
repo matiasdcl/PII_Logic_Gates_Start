@@ -14,6 +14,6 @@ public class NOTgate : IValorVerdad
 
     public bool Calcular()
     {
-        return !Entradas[1].Calcular();
+        return !Entradas[0].Calcular();
     }
 }
