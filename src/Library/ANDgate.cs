@@ -4,7 +4,7 @@ public class ANDgate : IValorVerdad
 {
     private List<IValorVerdad> entradas  = new List<IValorVerdad>();
 
-    public void AddEntrada(IValorVerdad valorVerdad)
+    public void AgregarValor(IValorVerdad valorVerdad)
     {
         this.entradas.Add(valorVerdad);    
     }
