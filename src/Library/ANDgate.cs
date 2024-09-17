@@ -2,5 +2,5 @@
 
 public class ANDgate : IValorVerdad
 {
-
+    
 }
