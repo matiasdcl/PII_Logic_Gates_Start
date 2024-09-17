@@ -2,17 +2,17 @@
 
 public class ANDgate : IValorVerdad
 {
-    private List<IValorVerdad> entradas { get; } = new List<IValorVerdad>();
+    public List<IValorVerdad> Entradas { get; } = new List<IValorVerdad>();
 
     public void AgregarValor(IValorVerdad valorVerdad)
     {
-        this.entradas.Add(valorVerdad);    
+        this.Entradas.Add(valorVerdad);    
     }
     
     public bool Calcular()
     {
         bool result = true;
-        foreach (IValorVerdad valor in entradas)
+        foreach (IValorVerdad valor in this.Entradas)
         {
             result = result && valor.Calcular();
         }

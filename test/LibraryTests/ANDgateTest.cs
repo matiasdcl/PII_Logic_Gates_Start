@@ -6,6 +6,17 @@ namespace LibraryTests;
 public class ANDgateTest
 {
     [Test]
+    public void TestAgregarValor()
+    {
+        ANDgate and1 = new ANDgate();
+        IValorVerdad a = new ValorVerdadFalse();
+        IValorVerdad b = new ValorVerdadFalse();
+        and1.AgregarValor(a);
+        Assert.That(and1.Entradas.Contains(a));
+        and1.AgregarValor(b);
+        Assert.That(and1.Entradas.Count, Is.EqualTo(2));
+    }
+    [Test]
     public void TestCalcular()
     {
         ANDgate and1 = new ANDgate();
